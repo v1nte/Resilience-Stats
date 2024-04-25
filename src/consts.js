@@ -20,6 +20,11 @@
       sortable: true
     },
     {
+      name: "Diff",
+      selector: row => row.diff,
+      sortable: true
+    },
+    {
       name: "Assists",
       selector: row => row.assists,
       sortable: true

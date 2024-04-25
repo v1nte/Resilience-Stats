@@ -16,6 +16,7 @@ export default function BigTable() {
         "hltv": (player.average_stats.hltvRating2).toFixed(3),
         "kills": player.sums_stats.killCount,
         "deaths": player.sums_stats.deathCount,
+        "diff": player.sums_stats.killCount - player.sums_stats.deathCount,
         "assists": player.sums_stats.assistCount,
         "KD": (player.sums_stats.killCount/player.sums_stats.deathCount).toFixed(2),
         "oneK": player.sums_stats.oneKillCount,
