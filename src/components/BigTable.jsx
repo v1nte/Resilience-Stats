@@ -1,14 +1,15 @@
 
 import { useState, useEffect } from 'react'
 import DataTable from "react-data-table-component"
-import { columns, rawData } from "../consts.js"
+import { columns, } from "../consts.js"
+import stats from "../stats.json"
 
 
 export default function BigTable() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    const formatedData = rawData.map(player => {
+    const formatedData = stats.map(player => {
       return {
         "name": player.player.name,
         "id": player.player.steamid,
