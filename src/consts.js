@@ -30,6 +30,11 @@
       sortable: true
     },
     {
+      name: "ADR" ,
+      selector: row => row.adr,
+      sortable: true
+    },
+    {
       name: "K/D",
       selector: row => row.KD,
       sortable: true

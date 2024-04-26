@@ -10,6 +10,10 @@ export default function BigTable() {
 
   useEffect(() => {
     const formatedData = stats.map(player => {
+
+      const adrList = player.matches.averageDamagePerRound
+      const averageAdr = adrList.reduce((acc,el) => acc+el, 0) / adrList.length
+
       return {
         "name": player.player.name,
         "id": player.player.steamid,
@@ -18,6 +22,7 @@ export default function BigTable() {
         "deaths": player.sums_stats.deathCount,
         "diff": player.sums_stats.killCount - player.sums_stats.deathCount,
         "assists": player.sums_stats.assistCount,
+        "adr": averageAdr,
         "KD": (player.sums_stats.killCount/player.sums_stats.deathCount).toFixed(2),
         "oneK": player.sums_stats.oneKillCount,
         "twoK": player.sums_stats.twoKillCount,
